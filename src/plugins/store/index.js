@@ -9,14 +9,14 @@ export const dataStore = {
 }
 
 const dataState = createPersistedState({
-  paths: ['data']
+  paths: [ 'data' ]
 })
 
 const store = createStore({
   modules: {
     dataStore
   },
-  plugins: [dataState],
+  plugins: [ dataState ],
 });
 
-export default {store}
+export default { store }
