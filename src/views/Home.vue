@@ -27,6 +27,14 @@ export default {
       return this.$tuos.auth.login(form)
     })
     .catch(e => console.log(e.message))
+    .then( e => {
+      console.log(e)
+      return e.token
+    })
+    .then((token) => {
+      console.log(`Token:'${token}'`)
+      return this.$tuos.auth.logout({token})
+    })
     .then( e => console.log(e))
   }
 }

@@ -70,7 +70,7 @@ class Auth {
       const logoutUrl = this.url[ 'logout' ]
       if (typeof form === 'object') {
         const { token } = _.pick(form, [ 'token' ]);
-        const { data } = await axios.delete(logoutUrl, {}, this.tokenOption(token))
+        const { data } = await axios.delete(logoutUrl, this.tokenOption(token))
           .catch(e => {
             return { type: 'error', message: e.message }
           });
@@ -86,7 +86,7 @@ class Auth {
       const logoutAllUrl = this.url[ 'logoutAll' ]
       if (typeof form === 'object') {
         const { token } = _.pick(form, [ 'token' ]);
-        const { data } = await axios.delete(logoutAllUrl, {}, this.tokenOption(token))
+        const { data } = await axios.delete(logoutAllUrl, this.tokenOption(token))
           .catch(e => {
             return { type: 'error', message: e.message }
           });
@@ -103,7 +103,7 @@ class Auth {
       if (typeof form === 'object') {
         const { token, id, _id } = _.pick(form, [ 'id', '_id', 'token' ]);
         logoutSessionUrl.replace('{id}', id || _id);
-        const { data } = await axios.delete(logoutSessionUrl, {}, this.tokenOption(token))
+        const { data } = await axios.delete(logoutSessionUrl, this.tokenOption(token))
           .catch(e => {
             return { type: 'error', message: e.message }
           });
