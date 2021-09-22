@@ -10,32 +10,25 @@ export default {
       user: 'lighty262',
       email: 'yeoligoakino@gmail.com',
       name:'Yeoligo Akino',
-      pass: '!Password123'
+      pass: '!Password1234'
     }
 
-    console.log('starting...')
-    this.$tuos.auth.register(form)
-    .then( e => {
-      const {type, message,data,token} = e
-      if(type === 'success'){
-        console.log(message, '\nData: ' + data, `\nToken: ${token}`)
-      } else throw new Error(message)
-    })
-    .catch(e => console.log('Error:', e.message))
-    .then(() => {
-      console.log('logging in...')
-      return this.$tuos.auth.login(form)
-    })
-    .catch(e => console.log(e.message))
-    .then( e => {
-      console.log(e)
-      return e.token
-    })
-    .then((token) => {
-      console.log(`Token:'${token}'`)
-      return this.$tuos.auth.logout({token})
-    })
-    .then( e => console.log(e))
+    // const sessions = []
+    // console.log('Register', await this.$tuos.auth.register(form))
+    console.log('Login', await this.$tuos.auth.login(form).then(e => {form.token = e.token; return e}))
+    // form.pass = '!Password123'
+    // console.log('Reset Password', await this.$tuos.auth.resetPassword(form).catch(e => e))
+    // console.log('Delete', await this.$tuos.auth.delete(form).catch(e => e))
+
+    // console.log('My Session', await this.$tuos.auth.mySession(form))
+    // console.log('Sessions', await this.$tuos.auth.sessions({...form,page:1,items:1000}).then(e => {e.data.forEach(({_id})=>sessions.push(_id));return e}))
+    // sessions.forEach(async id => {
+    //   console.log('Logout Session', id, await this.$tuos.auth.logoutSession({...form,id}))
+    // })    
+    // console.log('Logout Session', await this.$tuos.auth.logoutSession({id:''}))
+    
+    console.log('Logout All', await this.$tuos.auth.logoutAll(form))
+    console.log('Logout', await this.$tuos.auth.logout(form))
   }
 }
 </script>

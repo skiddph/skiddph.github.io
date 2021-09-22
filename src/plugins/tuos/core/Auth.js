@@ -102,8 +102,7 @@ class Auth {
       const logoutSessionUrl = this.url[ 'logoutSession' ]
       if (typeof form === 'object') {
         const { token, id, _id } = _.pick(form, [ 'id', '_id', 'token' ]);
-        logoutSessionUrl.replace('{id}', id || _id);
-        const { data } = await axios.delete(logoutSessionUrl, this.tokenOption(token))
+        const { data } = await axios.delete(logoutSessionUrl.replace('{id}', id || _id), this.tokenOption(token))
           .catch(e => {
             return { type: 'error', message: e.message }
           });
@@ -151,8 +150,7 @@ class Auth {
       const sessionUrl = this.url[ 'session' ]
       if (typeof form === 'object') {
         const { token, id, _id } = _.pick(form, [ 'id', '_id', 'token' ]);
-        sessionUrl.replace('{id}', id || _id);
-        const { data } = await axios.get(sessionUrl, this.tokenOption(token))
+        const { data } = await axios.get(sessionUrl.replace('{id}', id || _id), this.tokenOption(token))
           .catch(e => {
             return { type: 'error', message: e.message }
           });
@@ -168,9 +166,7 @@ class Auth {
       const sessionsUrl = this.url[ 'sessions' ]
       if (typeof form === 'object') {
         const { token, page, items } = _.pick(form, [ 'token', 'page', 'items' ]);
-        sessionsUrl.replace('{page}', page);
-        sessionsUrl.replace('{items}', items);
-        const { data } = await axios.get(sessionsUrl, this.tokenOption(token))
+        const { data } = await axios.get(sessionsUrl.replace('{page}', page || 1).replace('{items}', items || 10),this.tokenOption(token))
           .catch(e => {
             return { type: 'error', message: e.message }
           });
@@ -218,8 +214,7 @@ class Auth {
       const userUrl = this.url[ 'user' ]
       if (typeof form === 'object') {
         const { token, user } = _.pick(form, [ 'user', 'token' ]);
-        userUrl.replace('{user}', user);
-        const { data } = await axios.get(userUrl, this.tokenOption(token))
+        const { data } = await axios.get(userUrl.replace('{user}', user), this.tokenOption(token))
           .catch(e => {
             return { type: 'error', message: e.message }
           });
@@ -267,8 +262,7 @@ class Auth {
       const getUserCheckUrl = this.url[ 'getUserCheck' ]
       if (typeof form === 'object') {
         const { user } = _.pick(form, [ 'user' ]);
-        getUserCheckUrl.replace('{user}', user);
-        const { data } = await axios.get(getUserCheckUrl)
+        const { data } = await axios.get( getUserCheckUrl.replace('{user}', user))
           .catch(e => {
             return { type: 'error', message: e.message }
           });
@@ -300,9 +294,7 @@ class Auth {
       const usersUrl = this.url[ 'users' ]
       if (typeof form === 'object') {
         const { token, page, items } = _.pick(form, [ 'token', 'page', 'items' ]);
-        usersUrl.replace('{page}', page);
-        usersUrl.replace('{items}', items);
-        const { data } = await axios.get(usersUrl, this.tokenOption(token))
+        const { data } = await axios.get(usersUrl.replace('{page}', page).replace('{items}', items), this.tokenOption(token))
           .catch(e => {
             return { type: 'error', message: e.message }
           });
