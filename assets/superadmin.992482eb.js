@@ -1,0 +1,1 @@
+import{u as s,l as r,m as a,r as c,o as n,c as u,d as l,b as _}from"./vendor.6e3e509c.js";const p=_("h1",null,"Superadmin Layout",-1),h={setup(d){const e=s(),t=r();return a(()=>{e.state.token&&e.state.role===1||t.push("/")}),(i,m)=>{const o=c("router-view");return n(),u("div",null,[p,l(o)])}}};export{h as default};

@@ -1,0 +1,1 @@
+import{_ as c}from"./index.ca5230ee.js";import{o as n,c as o}from"./vendor.6e3e509c.js";var e={};const r={};function t(a,s){return n(),o("div",null,"super admin")}typeof e=="function"&&e(r);var _=c(r,[["render",t]]);export{_ as default};
