@@ -1,1 +1,0 @@
-import{_ as e}from"./index.ca5230ee.js";import{o as c,c as n,b as o}from"./vendor.6e3e509c.js";const r={},s=o("h1",null,"Scanner ",-1),t=[s];function a(_,d){return c(),n("div",null,t)}var f=e(r,[["render",a]]);export{f as default};
