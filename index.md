@@ -5,10 +5,8 @@ Sorry! `skiddph.ml` is not available right now, you can follow our social media 
 - [YouTube](https://www.youtube.com/channel/UCDmNi0xlNpAFaOa1fAVZBMw)
 
 ## Projects
- - [ ] Main website
  - [ ] Puffy (Cross-platform UI framework for Vue 3)
- - [x] Registre v1 Premium
- - [x] Registre v2 Premium
+
  - [ ] Registre v3 Premium
  - [ ] Registre Engine (Centralized Logging System)
  - [x] Domain Checker (npm module)
@@ -17,5 +15,8 @@ Sorry! `skiddph.ml` is not available right now, you can follow our social media 
  - [ ] Component Based Landing Page (Components for Vue 3)
 
 ## Private Projects
+ - [ ] Main website
+ - [x] Registre v1 Premium
+ - [x] Registre v2 Premium
  - [X] XXX Landing Page
  - [X] XXX Maintenance Page
