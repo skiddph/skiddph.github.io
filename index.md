@@ -4,6 +4,9 @@ Sorry! `skiddph.ml` is not available right now, you can follow our social media 
 - [Facebook Page](facebook.com/skiddph)
 - [YouTube](https://www.youtube.com/channel/UCDmNi0xlNpAFaOa1fAVZBMw)
 
+## Pages
+ - [Domain Checker](/domain-checker)
+
 ## Public Projects
  - [ ] Puffy (Cross-platform UI framework for Vue 3)
  - [ ] Registre Engine (Centralized Logging System)
