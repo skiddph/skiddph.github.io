@@ -15,7 +15,7 @@ Sorry! `skiddph.ml` is not available right now, you can follow our social media 
  - [ ] Puffy (Cross-platform UI framework for Vue 3)
  - [ ] Registre Engine (Centralized Logging System)
  - [x] Domain Checker (npm module)
- - [ ] Domain Checker (site)
+ - [x] Domain Checker (site)
  - [ ] Forms Engine (Engine for creating and proccessing forms)
  - [ ] Component Based Landing Page (Components for Vue 3)
 
