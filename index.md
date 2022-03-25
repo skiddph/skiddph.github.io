@@ -3,9 +3,11 @@ Sorry! `skiddph.ml` is not available right now, you can follow our social media 
 
 - [Facebook Page](facebook.com/skiddph)
 - [YouTube](https://www.youtube.com/channel/UCDmNi0xlNpAFaOa1fAVZBMw)
+- [Twitter](https://twitter.com/SkiddPH)
+- [Discord](https://discord.gg/ugSanJu5BJ)
 
 ## Pages
- - [Domain Checker](/domain-checker)
+ - [Domain Checker](https://domains.skiddph.ml) - [alt_1](/domain-checker), [alt_2](https://domains-ph.pages.dev)
 
 ## Public Projects
  - [ ] Puffy (Cross-platform UI framework for Vue 3)
